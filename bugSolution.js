@@ -1,0 +1,3 @@
+The bug in the provided code lies in the use of loose equality (`==`) in the `foo` function. Loose equality performs type coercion, which can lead to unexpected results. For example, `0 == false` evaluates to `true`, even though 0 is a number and false is a boolean.  To solve the problem, always use strict equality (`===`) when comparing values.  Strict equality does not perform type coercion and requires both values to be of the same type and have the same value to evaluate to true.
+
+The `bar` function shows the correct approach by using strict equality (`===`). This function will only return true if both `a` and `b` are strictly equal in both type and value.
